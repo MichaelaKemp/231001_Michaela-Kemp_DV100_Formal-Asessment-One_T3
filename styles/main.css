@@ -84,8 +84,9 @@ button {
 
 .card-img-top {
     width:auto;
-    height:320px;
+    height: 250px;
     margin: auto;
+    margin-top: 50px;
     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1); 
 }
 
@@ -104,4 +105,39 @@ button {
     height: 90vh; 
     position: relative;
     bottom: -100px;
+}
+
+.smaller
+{
+    height: 25vh;
+    width: 25vh; 
+    position: relative;
+    margin: 5px;
+    bottom: 150px;
+    border-radius: 10px;
+}
+
+.accordion-body
+{
+    display: none;
+}
+
+.accordion.active .accordion-body
+{
+    display: block;
+}
+
+.accordion
+{
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    float: left;}
+
+.table
+{
+    margin-left: 200px;
+    margin-top: 150px;
+    width: 900px;
+    text-align: center;
 }

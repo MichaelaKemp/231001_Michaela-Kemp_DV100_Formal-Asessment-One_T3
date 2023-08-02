@@ -1,3 +1,12 @@
+const accordions = document.querySelectorAll('.accordion')
+accordions.forEach(accordion => { 
+  accordion.addEventListener('click', e => {
+    accordion.classList.toggle('active')
+  })
+})
+
+
+
 // ----------------------------------------------------------------
 // Plants Array
 // ----------------------------------------------------------------
@@ -32,6 +41,48 @@ const plants = [
     "price": 1200,
     "description": "Known for its stunning foliage that transforms with the seasons, this ornamental tree captivates with its delicate, lacy leaves in vibrant shades of red, orange, or gold.",
     "image": "plant5.png"
+  },
+
+  {
+    "name": "Amaryllis",
+    "price": 500,
+    "description": "Popular flowering bulbous plant known for its large, trumpet-shaped blooms. It is widely cultivated for its stunning flowers, which come in various colors, including red, white, pink, orange, and bicolor varieties.",
+    "image": "Amaryllis.jpeg"
+  },
+  
+  {
+    "name": "Bulbs",
+    "price": 100,
+    "description": "Popular for their delightful and fragrant blooms that appear when the weather is cooler. They are a simple yet effective way to infuse gardens with vibrant colors and pleasant scents, making them a favorite choice for winter landscaping.",
+    "image": "Bulbs.jpeg"
+  },
+
+  {
+    "name": "Clivias",
+    "price": 300,
+    "description": "Clivias are a beloved choice for winter gardening because of their ability to bloom in the shade during the winter months. Their bright and cheerful flowers bring a sense of warmth and vibrancy to gardens when many other plants are not in bloom.",
+    "image": "Clivias.jpeg"
+  },
+
+  {
+    "name": "Jasmine",
+    "price": 150,
+    "description": "Winter-flowering shrubs are popular for their ability to add visual interest and sweet fragrance to winter gardens. These shrubs provide a refreshing burst of scent and color during the colder months, enhancing the overall garden experience.",
+    "image": "Jasmine.png"
+  },
+
+  {
+    "name": "Pansies",
+    "price": 275,
+    "description": "Winter pansies are popular for their resilience and ability to thrive in colder temperatures. They offer a wide range of colors and patterns, and their cheerful faces provide a welcome sight during the winter season, brightening up gardens and container displays.",
+    "image": "Pansies.jpeg"
+  },
+
+  {
+    "name": "Primroses",
+    "price": 300,
+    "description": "Primroses are popular for their dainty and charming blooms that bring a touch of elegance to winter gardens. They are known for their cold tolerance and ease of cultivation, making them a top choice for adding color and cheer to outdoor spaces during the colder months.",
+    "image": "Primrose.jpeg"
   }
 ];
 
@@ -99,5 +150,10 @@ $("#plantsContainer").on('click', '.card', function(){
   // Resize the image to fit the additional content
   $(this).find(".card-img-top").toggleClass("small");
 
-});
+})
 
+$(document).ready(function() {
+  $(document).on('click', '.remove-btn', function() {
+    $(this).closest('tr').remove()
+  })
+})
